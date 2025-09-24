@@ -1,0 +1,54 @@
+html {
+    background-color: white;
+}
+
+body {
+    /* A4 dimensions */
+    padding: 1cm;
+    width: 21cm;
+    height: 29.7cm;
+
+    /* Elements for easy views when editing */
+    outline: 1px solid black;
+    filter: drop-shadow(30px 10px 10px rgb(230, 229, 229));
+    background-color: rgb(255, 255, 255);
+
+    /* Center the content on the page */
+    margin-left:auto;
+    margin-right:auto;
+
+    /* Default text alignment */
+    text-align: justify;
+}
+
+/* Contact align rules */
+table#contact-infos {
+    border: 2px solid black;
+    text-align: left;
+}
+table#contact-infos > thead {
+    /* visibility: hidden; */
+    display: none;
+}
+table#contact-infos td + td, table#contact-infos th + th {
+    text-align: right;
+}
+
+/* Experience style */
+main div.experience-title {
+    display: flex;
+    gap: 10px;
+}
+main div.experience-title h3 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+main div.experience-title h4 {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
