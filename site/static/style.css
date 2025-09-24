@@ -202,6 +202,58 @@ div.formation p {
     margin-top: 0;
 }
 
+/* Formation timeline */
+
+/* The actual timeline (the vertical ruler) */
+.formations {
+  position: relative;
+  /* max-width: 1200px;
+  margin: 0 auto; */
+}
+
+/* The actual timeline (the vertical ruler) */
+.formations::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: -10%;
+}
+
+/* Container around content */
+
+/* The circles on the timeline */
+.formation::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: -11.5%;
+  background-color: rgb(0, 0, 0);
+  top: 18px;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+/* Add arrows to the left container (pointing right) */
+
+/* Add arrows to the right container (pointing left) */
+/* .formation::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(0, 0, 0);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(0, 0, 0) transparent transparent;
+} */
+
+
 /* PDF export */
 @media print {
     @page {
