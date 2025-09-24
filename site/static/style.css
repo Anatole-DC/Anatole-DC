@@ -27,6 +27,19 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+tech {
+    /* color: rgb(0, 0, 0); */
+    font-weight: 500;
+}
+
 html {
     background-color: white;
 }
@@ -56,6 +69,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    color: rgb(0, 0, 0);
 }
 
 /* Header Grid Layout */
@@ -204,11 +219,22 @@ div.formation p {
 
 /* Formation timeline */
 
-/* The actual timeline (the vertical ruler) */
 .formations {
   position: relative;
-  /* max-width: 1200px;
-  margin: 0 auto; */
+}
+
+/* Arrow at the top of the timeline */
+.formations::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -11.5%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid rgb(0, 0, 0);
+  z-index: 2;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -217,29 +243,30 @@ div.formation p {
   position: absolute;
   width: 3px;
   background-color: rgb(0, 0, 0);
-  top: 0;
+  top: 10px;
   bottom: 0;
   left: -10%;
 }
 
 /* Container around content */
+.formation {
+  position: relative;
+}
 
 /* The circles on the timeline */
 .formation::after {
   content: '';
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   left: -11.5%;
   background-color: rgb(0, 0, 0);
-  top: 18px;
-  border-radius: 100%;
+  top: 20px;
+  border-radius: 50%;
   z-index: 1;
 }
 
-/* Add arrows to the left container (pointing right) */
-
-/* Add arrows to the right container (pointing left) */
+/* Add arrows to the formation containers */
 /* .formation::before {
   content: " ";
   height: 0;
@@ -247,9 +274,9 @@ div.formation p {
   top: 22px;
   width: 0;
   z-index: 1;
-  left: 30px;
+  left: -8%;
   border: medium solid rgb(0, 0, 0);
-  border-width: 10px 10px 10px 0;
+  border-width: 5px 5px 5px 0;
   border-color: transparent rgb(0, 0, 0) transparent transparent;
 } */
 
