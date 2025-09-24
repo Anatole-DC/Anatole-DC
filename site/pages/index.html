@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anatole de Chauveron</title>
 
     <link rel="stylesheet" href="../static/style.css">
@@ -26,140 +26,165 @@
             <tr><td>Téléphone</td> <td>+33 7 81 92 81 89</td></tr>
             <tr><td>Email</td> <td>adechauveron@gmail.com</td></tr>
             <tr><td>Adresse</td> <td>Paris 15</td></tr>
-            <tr><td>Github</td> <td>https://gitdub.com/Anatole-DC</td></tr>
+            <tr><td>Github</td> <td><a target="_blank" rel="noopener noreferrer" href="https://github.com/Anatole-DC">https://github.com/Anatole-DC</a></td></tr>
         </table>
     </header>
 
     <main>
-        <h2>Expérience et projets</h2>
+        <h2>Expériences et projets</h2>
 
-        <div id="solids" class="experience">
-            <div class="experience-title">
-                <h3>Co-fondateur - SOLIDS</h3>
-                <h4>Septembre 2023 - Aujourd'hui</h4>
+        <div id="experiences">
+
+            <div id="solids" class="experience">
+                <div class="experience-title">
+                    <h3><a target="_blank" rel="noopener noreferrer" href="https://www.solids-workshop.fr/">Co-fondateur - SOLIDS</a></h3>
+                    <h4>Septembre 2023 - Aujourd'hui</h4>
+                </div>
+                <p class="description">
+                    Création, gestion et développement d'une entreprise spécialisée en impression 3D.
+                    Responsable de la partie R&D et développement et maintenance des services numériques.
+                </p>
+                <ul class="tasks">
+                    <li>
+                        Création d'une plateforme e-commerce d'impression 3D avec <tech>SvelteKit</tech> (<tech>Typescript</tech>),
+                        <tech>ThreeJS</tech>, <tech>Stripe</tech>, <tech>Umami</tech> et <tech>PocketBase</tech>, déploiement et maintenance avec <tech>Docker</tech>,
+                        <tech>Traefik</tech> et <tech>Graphana</tech> sur <tech>OVHCloud</tech>
+                    </li>
+                    <li>
+                        Développement d'un système de détection d'echecs pour imprimantes 3D
+                        (<tech>Raspberry</tech>, <tech>Python</tech>, <tech>OpenCV</tech>), intégration des différents firmwares d'imprimantes.
+                        CAO sur <tech>Fusion360</tech>
+                    </li>
+                </ul>
             </div>
-            <p class="description">
-                Création, gestion et développement d'une entreprise spécialisée en impression 3D.
-                Responsable de la partie R&D et développement et maintenance des services numériques.
-            </p>
-            <ul class="tasks">
-                <li>
-                    Création d'une plateforme e-commerce d'impression 3D avec SvelteKit (Typescript),
-                    ThreeJS, Stripe, Umami et PocketBase, déploiement et maintenance avec Docker,
-                    Traefik et Graphana sur OVHCloud
-                </li>
-                <li>
-                    Développement d'un système de détection d'echecs pour imprimantes 3D
-                    (Raspberry, Python, OpenCV), intégration des différents firmwares d'imprimantes.
-                    CAO sur Fusion360
-                </li>
-            </ul>
+    
+            <div id="lewagon" class="experience">
+                <div class="experience-title">
+                    <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/Anatole-DC/koregraph">Porteur de projet - Koregraph</a></h3>
+                    <h4>Juin 2024</h4>
+                </div>
+                <p class="description">
+                    Recherche et conception d'un réseaux de neurones, capable de générer une chorégraphie en sortie, à partir d'une musique en entrée.
+                </p>
+                <ul class="tasks">
+                    <li>
+                        Préprocessing et création du modèle avec <tech>Tensorflow</tech>, <tech>Keras</tech>, et <tech>Librosa</tech>
+                    </li>
+                    <li>
+                        Mise à l'échelle des entraînements et monitoring avec <tech>Google Cloud Platform</tech>, <tech>Docker</tech> et <tech>Mlflow</tech>
+                    </li>
+                    <li>
+                        Packaging du projet en <tech>Python</tech> avec <tech>Poetry</tech>
+                    </li>
+                </ul>
+            </div>
+    
+            <div id="ivs" class="experience">
+                <div class="experience-title">
+                    <h3><a target="_blank" rel="noopener noreferrer" href="https://ivstore.fr/index.php/en/home/">Alternance - new IVS</a></h3>
+                    <h4>Août 2021 - Septembre 2023</h4>
+                </div>
+                <p class="description">
+                    Alternant en tant que développeur informatique en recherche et développement vision des ordinateurs chez new Intelligent Video Software.
+                </p>
+                <ul class="tasks">
+                    <li>
+                        Gestion big data de données temporelles avec <tech>HBase</tech>, de documents (images) avec <tech>MongoDB</tech>, et <tech>MySQL</tech>
+                    </li>
+                    <li>
+                        Développement computer vision avec <tech>OpenCV</tech> en <tech>C++</tech> pour micro-ordinateurs (<tech>Raspberry</tech>, <tech>Coral Devboard</tech>, <tech>Jetson Nano</tech>)
+                    </li>
+                    <li>
+                        CAO avec <tech>Fusion 360</tech> et impression de prototypes 3D
+                    </li>
+                </ul>
+            </div>
+
+            <div id="memoire" class="experience">
+                <div class="experience-title">
+                    <h3><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1e7dcLuqfZApFxsHKO7zxOB4DJYxNpwvd/view?usp=sharing">Mémoire de recherche</a></h3>
+                    <h4>Septembre 2021 - Mars 2023</h4>
+                </div>
+                <p class="description">
+                    Recherche sur la détection automatique des actions dans le sport (approche centrée sur le basket). Création d'un framework de création de chaîne de traitement et d'extractions de données en <tech>Python</tech>.
+                </p>
+                <ul class="tasks">
+                    <li>
+                        Création du framework en <tech>Python</tech> et <tech>OpenCV</tech>
+                    </li>
+                    <li>
+                        Annotation et entrainement d'un modèle de détection de balle avec <tech>PyTorch</tech> et <tech>YOLOv5</tech>
+                    </li>
+                    <li>
+                        Gestion de données en séries temporelles avec <tech>PostgresSQL</tech> et <tech>TimescaleDB</tech>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div id="lewagon" class="experience">
-            <div class="experience-title">
-                <h3>Teacher Assistant - Le Wagon</h3>
-                <h4>Juin 2024 - Septembre 2025</h4>
-            </div>
-            <p class="description">
-                Recherche et conception d'un réseaux de neurones, capable de générer une chorégraphie en sortie, à partir d'une musique en entrée.
-            </p>
-            <ul class="tasks">
-                <li>
-                    Préprocessing et création du modèle avec Tensorflow, Keras, et Librosa
-                </li>
-                <li>
-                    Mise à l'échelle des entraînements et monitoring avec Google Cloud Platform, Docker et Mlflow
-                </li>
-                <li>
-                    Packaging du projet en Python avec Poetry
-                </li>
-            </ul>
-        </div>
-
-        <div id="ivs" class="experience">
-            <div class="experience-title">
-                <h3>Alternance - new IVS</h3>
-                <h4>Août 2021 - Septembre 2023</h4>
-            </div>
-            <p class="description">
-                Alternant en tant que développeur informatique en recherche et développement vision des ordinateurs chez new Intelligent Video Software.
-            </p>
-            <ul class="tasks">
-                <li>
-                    Gestion big data de données temporelles avec HBase, de documents (images) avec MongoDB, et MySQL
-                </li>
-                <li>
-                    Développement computer vision avec OpenCV en C++ pour micro-ordinateurs (Raspberry, Coral Devboard, Jetson Nano)
-                </li>
-                <li>
-                    CAO avec Fusion 360 et impression de prototypes 3D
-                </li>
-            </ul>
-        </div>
     </main>
 
     <footer>
-        <div class="interests">
+        <div class="interest-area">
             <h2>Centres d'intérêts</h2>
 
-            <div class="interest" id="music">
-                <h4>Musique</h4>
-                <ul>
-                    <li>Diplôme études musicale (Cycle 3)</li>
-                    <li>Clarinette, Orchestre, Orgue</li>
-                </ul>
+            <div class="interests">
+                <div class="interest" id="music">
+                    <h4>Musique</h4>
+                    <ul>
+                        <li>Diplôme études musicale (Cycle 3)</li>
+                        <li>Clarinette, Orchestre, Orgue</li>
+                    </ul>
+                </div>
+    
+                <div class="interest" id="scoutisme">
+                    <h4>Scoutisme</h4>
+                    <ul>
+                        <li>Douze ans en tant que scout</li>
+                        <li>Chef pendant deux ans</li>
+                    </ul>
+                </div>
+    
+                <div class="interest" id="theatre">
+                    <h4>Théâtre</h4>
+                    <ul>
+                        <li>Deux ans au lycée</li>
+                        <li>Ecriture, conception et mise en scène</li>
+                    </ul>
+                </div>
+    
+                <div class="interest" id="sport">
+                    <h4>Sport</h4>
+                    <ul>
+                        <li>Basketball (compétition)</li>
+                        <li>Natation</li>
+                        <li>Volleyball</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="interest" id="scoutisme">
-                <h4>Scoutisme</h4>
-                <ul>
-                    <li>Douze ans en tant que scout</li>
-                    <li>Chef pendant deux ans</li>
-                </ul>
-            </div>
-
-            <div class="interest" id="theatre">
-                <h4>Théâtre</h4>
-                <ul>
-                    <li>Deux ans au lycée</li>
-                    <li>Ecriture, conception et mise en scène</li>
-                </ul>
-            </div>
-
-            <div class="interest" id="sport">
-                <h4>Sport</h4>
-                <ul>
-                    <li>Basketball (compétition)</li>
-                    <li>Natation</li>
-                    <li>Volleyball</li>
-                </ul>
-            </div>
         </div>
 
-        <div class="formations">
+        <div id="formation-area">
             <h2>Formations</h2>
-            
-            <div class="formation">
-                <div class="formation-title">
-                    <h4>Datascience (2024)</h4>
+
+            <div class="formations">
+                <div class="formation">
+                    <h4>Datascience bootcamp (2024)</h4>
+                    <p>Le Wagon - Paris</p>
                 </div>
-                <p>Le Wagon - Paris</p>
-            </div>
-            
-            <div class="formation">
-                <div class="formation-title">
+                
+                <div class="formation">
                     <h4>Master 2 Cyber (2021 - 2023)</h4>
+                    <p>Université Catholique de Lille, École du Numérique</p>
                 </div>
-                <p>Université Catholique de Lille, École du Numérique</p>
+                
+                <div class="formation">
+                    <h4>Licence Sciences du Numérique</h4>
+                    <p>Université Catholique de Lille, FGES</p>
+                </div>
             </div>
             
-            <div class="formation">
-                <div class="formation-title">
-                    <h4>Licence Sciences du Numérique</h4>
-                </div>
-                <p>Université Catholique de Lille, FGES</p>
-            </div>
         </div>
     </footer>
 </body>

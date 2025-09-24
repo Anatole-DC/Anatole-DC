@@ -1,54 +1,318 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+tech {
+    /* color: rgb(0, 0, 0); */
+    font-weight: 500;
+}
+
 html {
     background-color: white;
 }
 
 body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: small;
+    
     /* A4 dimensions */
     padding: 1cm;
     width: 21cm;
     height: 29.7cm;
 
     /* Elements for easy views when editing */
-    outline: 1px solid black;
-    filter: drop-shadow(30px 10px 10px rgb(230, 229, 229));
+    /* outline: 1px solid black; */
+    filter: drop-shadow(10px 10px 10px rgb(230, 229, 229)) drop-shadow(10px 20px 30px rgb(230, 229, 229));
     background-color: rgb(255, 255, 255);
 
     /* Center the content on the page */
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 
     /* Default text alignment */
     text-align: justify;
+
+    /* Ensure elements use full page*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: rgb(0, 0, 0);
 }
 
-/* Contact align rules */
-table#contact-infos {
-    border: 2px solid black;
-    text-align: left;
+/* Header Grid Layout */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 75px;
+    align-items: start;
+    margin-bottom: 20px;
 }
+
+header .description h1 {
+    /* margin: 0 0 10px 0; */
+    margin-top: 0;
+    font-size: xx-large;
+}
+
+header .description p {
+    margin: 0;
+    font-size: larger;
+    /* font-style: italic; */
+}
+
+/* Contact table styling */
+table#contact-infos {
+    /* border-radius: 10px;
+    border-collapse: collapse; */
+    border: 2px solid black;
+
+    border-collapse: separate;
+    border-radius: 10px;
+
+    padding: 16px;
+
+    text-align: left;
+    min-width: 250px;
+    height: 100%;
+}
+
 table#contact-infos > thead {
-    /* visibility: hidden; */
     display: none;
 }
+
+table#contact-infos td {
+    padding: 4px 8px;
+}
+
+/* table#contact-infos td:first-child {
+    font-weight: bold;
+    background-color: #f0f0f0;
+} */
+
 table#contact-infos td + td, table#contact-infos th + th {
     text-align: right;
 }
 
-/* Experience style */
+/* Experience style (no grid - as requested) */
+main {
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+main#experiences {
+    /* margin-bottom: 20px; */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main h2 {
+    margin-bottom: 15px;
+}
+
+/* main div.experience {
+    margin-bottom: 20px;
+} */
+
 main div.experience-title {
     display: flex;
     gap: 10px;
 }
+
 main div.experience-title h3 {
     text-decoration: underline;
     font-weight: bold;
+    margin-bottom: 0px;
 }
+
 main div.experience-title h4 {
     font-weight: lighter;
     font-style: italic;
+    margin-bottom: 0px;
 }
 
-@page {
-    size: A4 portrait;
+main div.experience .description {
+    margin-bottom: 8px;
+}
+
+main div.experience ul.tasks {
     margin: 0;
+    padding-left: 20px;
+}
+
+main div.experience ul.tasks li {
+    margin-bottom: 5px;
+}
+
+/* Footer Grid Layout - Two columns */
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 100px;
+    align-items: stretch;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+/* Interests Grid Layout */
+.interests {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    /* align-items: end; */
+}
+
+div.interest > ul {
+    padding-left: 20px;
+}
+
+/* Formations */
+.formations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.formation h4 {
+    margin-bottom: 4px;
+}
+
+div.formation p {
+    margin-top: 0;
+}
+
+/* Formation timeline */
+
+.formations {
+  position: relative;
+}
+
+/* Arrow at the top of the timeline */
+.formations::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -11.5%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid rgb(0, 0, 0);
+  z-index: 2;
+}
+
+/* The actual timeline (the vertical ruler) */
+.formations::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: rgb(0, 0, 0);
+  top: 10px;
+  bottom: 0;
+  left: -10%;
+}
+
+/* Container around content */
+.formation {
+  position: relative;
+}
+
+/* The circles on the timeline */
+.formation::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: -11.5%;
+  background-color: rgb(0, 0, 0);
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Add arrows to the formation containers */
+/* .formation::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: -8%;
+  border: medium solid rgb(0, 0, 0);
+  border-width: 5px 5px 5px 0;
+  border-color: transparent rgb(0, 0, 0) transparent transparent;
+} */
+
+
+/* PDF export */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+    
+    html {
+        background-color: transparent;
+    }
+    
+    body {
+        /* Remove drop shadow and outline for print */
+        filter: none;
+        outline: none;
+        
+        /* Remove margins to ensure full page usage */
+        margin: 0;
+        
+        /* Ensure proper positioning */
+        position: relative;
+        
+        /* Keep A4 dimensions but remove any extra spacing */
+        width: 21cm;
+        height: 29.7cm;
+        padding: 1cm;
+    }
 }
