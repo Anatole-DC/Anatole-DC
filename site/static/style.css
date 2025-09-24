@@ -14,38 +14,165 @@ body {
     background-color: rgb(255, 255, 255);
 
     /* Center the content on the page */
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 
     /* Default text alignment */
     text-align: justify;
 }
 
-/* Contact align rules */
+/* Header Grid Layout */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+header .description h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+header .description p {
+    margin: 0;
+    /* font-style: italic; */
+}
+
+/* Contact table styling */
 table#contact-infos {
     border: 2px solid black;
     text-align: left;
+    border-collapse: collapse;
+    min-width: 250px;
 }
+
 table#contact-infos > thead {
-    /* visibility: hidden; */
     display: none;
 }
+
+table#contact-infos td {
+    padding: 3px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* table#contact-infos td:first-child {
+    font-weight: bold;
+    background-color: #f0f0f0;
+} */
+
 table#contact-infos td + td, table#contact-infos th + th {
     text-align: right;
 }
 
-/* Experience style */
+/* Experience style (no grid - as requested) */
+/* main {
+    margin-bottom: 20px;
+} */
+
+main h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+main div.experience {
+    margin-bottom: 20px;
+}
+
 main div.experience-title {
     display: flex;
     gap: 10px;
 }
+
 main div.experience-title h3 {
     text-decoration: underline;
     font-weight: bold;
+    margin-bottom: 0px;
 }
+
 main div.experience-title h4 {
     font-weight: lighter;
     font-style: italic;
+    margin-bottom: 0px;
+}
+
+main div.experience .description {
+    margin-bottom: 8px;
+}
+
+main div.experience ul.tasks {
+    margin: 0;
+    padding-left: 20px;
+}
+
+main div.experience ul.tasks li {
+    margin-bottom: 5px;
+}
+
+/* Footer Grid Layout - Two columns */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Interests Grid Layout */
+.interests {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.interests .interest {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: start;
+}
+
+.interests .interest h4 {
+    margin: 0;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+.interests .interest ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.interests .interest ul li {
+    margin-bottom: 2px;
+}
+
+/* Formations Grid Layout */
+.formations {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.formations .formation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+}
+
+.formations .formation-title h4 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.formations .formation p {
+    margin: 0;
+    font-size: 14px;
 }
 
 @page {
