@@ -130,7 +130,14 @@ table#contact-infos td + td, table#contact-infos th + th {
 /* Experience style (no grid - as requested) */
 main {
     height: 100%;
+    margin-bottom: 20px;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
 
 main#experiences {
     /* margin-bottom: 20px; */
@@ -144,9 +151,9 @@ main h2 {
     margin-bottom: 15px;
 }
 
-main div.experience {
+/* main div.experience {
     margin-bottom: 20px;
-}
+} */
 
 main div.experience-title {
     display: flex;
@@ -286,5 +293,26 @@ div.formation p {
     @page {
         size: A4 portrait;
         margin: 0;
+    }
+    
+    html {
+        background-color: transparent;
+    }
+    
+    body {
+        /* Remove drop shadow and outline for print */
+        filter: none;
+        outline: none;
+        
+        /* Remove margins to ensure full page usage */
+        margin: 0;
+        
+        /* Ensure proper positioning */
+        position: relative;
+        
+        /* Keep A4 dimensions but remove any extra spacing */
+        width: 21cm;
+        height: 29.7cm;
+        padding: 1cm;
     }
 }
