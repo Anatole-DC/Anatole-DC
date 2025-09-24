@@ -114,8 +114,12 @@ table#contact-infos td + td, table#contact-infos th + th {
 
 /* Experience style (no grid - as requested) */
 main {
-    /* margin-bottom: 20px; */
     height: 100%;
+}
+
+main#experiences {
+    /* margin-bottom: 20px; */
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -190,8 +194,12 @@ div.interest > ul {
     justify-content: space-between;
 }
 
-div.formation * {
-    margin-bottom: 2px;
+div.formation h4 {
+    margin-bottom: 4px;
+}
+
+div.formation p {
+    margin-top: 0;
 }
 
 /* PDF export */
