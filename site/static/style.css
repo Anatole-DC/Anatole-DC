@@ -1,16 +1,48 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/static/Montserrat-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
 html {
     background-color: white;
 }
 
 body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: small;
+    
     /* A4 dimensions */
     padding: 1cm;
     width: 21cm;
     height: 29.7cm;
 
     /* Elements for easy views when editing */
-    outline: 1px solid black;
-    filter: drop-shadow(30px 10px 10px rgb(230, 229, 229));
+    /* outline: 1px solid black; */
+    filter: drop-shadow(10px 10px 10px rgb(230, 229, 229)) drop-shadow(10px 20px 30px rgb(230, 229, 229));
     background-color: rgb(255, 255, 255);
 
     /* Center the content on the page */
@@ -19,33 +51,48 @@ body {
 
     /* Default text alignment */
     text-align: justify;
+
+    /* Ensure elements use full page*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Header Grid Layout */
 header {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 20px;
+    column-gap: 75px;
     align-items: start;
     margin-bottom: 20px;
 }
 
 header .description h1 {
-    margin: 0 0 10px 0;
-    font-size: 24px;
+    /* margin: 0 0 10px 0; */
+    margin-top: 0;
+    font-size: xx-large;
 }
 
 header .description p {
     margin: 0;
+    font-size: larger;
     /* font-style: italic; */
 }
 
 /* Contact table styling */
 table#contact-infos {
+    /* border-radius: 10px;
+    border-collapse: collapse; */
     border: 2px solid black;
+
+    border-collapse: separate;
+    border-radius: 10px;
+
+    padding: 16px;
+
     text-align: left;
-    border-collapse: collapse;
     min-width: 250px;
+    height: 100%;
 }
 
 table#contact-infos > thead {
@@ -53,9 +100,7 @@ table#contact-infos > thead {
 }
 
 table#contact-infos td {
-    padding: 3px 8px;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: 4px 8px;
 }
 
 /* table#contact-infos td:first-child {
@@ -68,13 +113,16 @@ table#contact-infos td + td, table#contact-infos th + th {
 }
 
 /* Experience style (no grid - as requested) */
-/* main {
-    margin-bottom: 20px;
-} */
+main {
+    /* margin-bottom: 20px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 main h2 {
     margin-bottom: 15px;
-    font-size: 18px;
 }
 
 main div.experience {
@@ -114,68 +162,42 @@ main div.experience ul.tasks li {
 /* Footer Grid Layout - Two columns */
 footer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 100px;
+    align-items: stretch;
 }
 
 footer h2 {
     margin-bottom: 15px;
-    font-size: 18px;
 }
 
 /* Interests Grid Layout */
 .interests {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    /* align-items: end; */
 }
 
-.interests .interest {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 15px;
-    align-items: start;
+div.interest > ul {
+    padding-left: 20px;
 }
 
-.interests .interest h4 {
-    margin: 0;
-    font-weight: bold;
-    min-width: 80px;
+/* Formations */
+.formations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.interests .interest ul {
-    margin: 0;
-    padding-left: 15px;
-}
-
-.interests .interest ul li {
+div.formation * {
     margin-bottom: 2px;
 }
 
-/* Formations Grid Layout */
-.formations {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-.formations .formation {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2px;
-}
-
-.formations .formation-title h4 {
-    margin: 0;
-    font-weight: bold;
-}
-
-.formations .formation p {
-    margin: 0;
-    font-size: 14px;
-}
-
-@page {
-    size: A4 portrait;
-    margin: 0;
+/* PDF export */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
 }
