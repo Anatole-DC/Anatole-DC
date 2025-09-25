@@ -34,12 +34,6 @@
     font-style: normal;
 }
 
-
-tech {
-    /* color: rgb(0, 0, 0); */
-    font-weight: 500;
-}
-
 html {
     background-color: white;
 }
@@ -78,7 +72,7 @@ body {
 header {
     display: grid;
     grid-template-columns: 1fr auto;
-    column-gap: 25px;
+    column-gap: 50px;
     align-items: start;
     margin-bottom: 20px;
 }
@@ -139,6 +133,15 @@ table#contact-infos td + td, table#contact-infos th + th {
 main {
     height: 100%;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main div#experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 }
 
 a {
@@ -146,13 +149,17 @@ a {
     text-decoration: none;
 }
 
-
-main#experiences {
-    /* margin-bottom: 20px; */
-    /* height: 100%; */
+div.badges {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+}
+
+tech {
+    font-size: smaller;
+    background-color: rgb(237, 237, 237);
+    padding: 1px 5px;
+    border-radius: 10px;
+    font-weight: 500;
 }
 
 main h2 {
@@ -166,6 +173,7 @@ main h2 {
 main div.experience-title {
     display: flex;
     gap: 10px;
+    margin-bottom: 5px;
 }
 
 main div.experience-title h3 {
@@ -182,6 +190,7 @@ main div.experience-title h4 {
 
 main div.experience .description {
     margin-bottom: 8px;
+    margin-top: 5px;
 }
 
 main div.experience ul.tasks {
