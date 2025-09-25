@@ -71,16 +71,24 @@ body {
 /* Header Grid Layout */
 header {
     display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 50px;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 25px;
     align-items: start;
     margin-bottom: 20px;
+}
+
+header img {
+    width: 120px;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    align-self: center;
 }
 
 header .description h1 {
     /* margin: 0 0 10px 0; */
     margin-top: 0;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 header .description p {
@@ -105,7 +113,7 @@ table#contact-infos {
     border-collapse: separate;
     border-radius: 10px;
 
-    padding: 16px;
+    padding:8px;
 
     text-align: left;
     min-width: 250px;
@@ -199,7 +207,7 @@ main div.experience ul.tasks {
 }
 
 main div.experience ul.tasks li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 /* Footer Grid Layout - Two columns */
