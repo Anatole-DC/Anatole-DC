@@ -68,6 +68,11 @@ body {
     color: rgb(0, 0, 0);
 }
 
+a {
+    color: rgb(0, 0, 0);
+    text-decoration-style: dotted;
+}
+
 /* Header Grid Layout */
 header {
     display: grid;
@@ -214,6 +219,7 @@ main div.experience-title {
 
 main div.experience-title h3 {
     text-decoration: underline;
+    /* text-decoration-style: dotted; */
     font-weight: bold;
     margin-bottom: 0px;
 }
