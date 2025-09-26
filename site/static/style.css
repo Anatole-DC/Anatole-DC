@@ -154,12 +154,12 @@ main div#experiences {
     flex: 1;
 }
 
-h3 a {
+h3 a, h4 a {
     color: black;
     text-decoration: none;
 }
 
-main div.experience-title h3 a::before {
+h4 a::before, h3 a::before {
     content: "";
     display: inline-block;
     width: 0.8em;
@@ -170,7 +170,7 @@ main div.experience-title h3 a::before {
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.8;
-    vertical-align: middle;
+    vertical-align: 0%;
 }
 
 div.badges {
@@ -230,8 +230,7 @@ main div.experience ul.tasks li {
 footer {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 100px;
-    align-items: stretch;
+    column-gap: 50px;
 }
 
 footer h2 {
@@ -243,6 +242,7 @@ footer h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
+    /* height: 100%; */
     /* align-items: end; */
 }
 
@@ -255,14 +255,25 @@ div.interest > ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1;
 }
 
 div.formation h4 {
+    margin-bottom: 0px;
+    text-align: left;
+    /* margin-top: 0px; */
+}
+
+div.formation h5 {
+    margin-top: 2px;
     margin-bottom: 4px;
+    font-style: italic;
+    font-weight: lighter;
 }
 
 div.formation p {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Formation timeline */
@@ -276,7 +287,7 @@ div.formation p {
   content: '';
   position: absolute;
   top: 0px;
-  left: -11.5%;
+  left: -9.7%;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -293,7 +304,7 @@ div.formation p {
   background-color: rgb(0, 0, 0);
   top: 10px;
   bottom: 0;
-  left: -10%;
+  left: -20px;
 }
 
 /* Container around content */
@@ -302,15 +313,15 @@ div.formation p {
 }
 
 /* The circles on the timeline */
-.formation::after {
+.formation::before {
   content: '';
   position: absolute;
   width: 9px;
   height: 9px;
-  left: -11.5%;
+  left: -9.3%;
   background-color: rgb(0, 0, 0);
   top: 20px;
-  border-radius: 50%;
+  border-radius: 100%;
   z-index: 1;
 }
 
