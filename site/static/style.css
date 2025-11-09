@@ -204,8 +204,13 @@ tech {
 }
 
 main h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
+
+h2 {
+    text-transform: uppercase;
+}
+
 
 /* main div.experience {
     margin-bottom: 20px;
@@ -213,7 +218,7 @@ main h2 {
 
 main div.experience-title {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     margin-bottom: 5px;
 }
 
