@@ -3,191 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Anatole de Chauveron</title>
 
-    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link rel="stylesheet" href="./static/style.css"> -->
 </head>
 <body>
-    <header>
-        <img src="https://avatars.githubusercontent.com/u/54862351?v=4" alt="Github picture">
-        <div class="description">
-            <h1>Anatole de Chauveron</h1>
-            <p>
-                Développeur logiciels, logiciels embarqués, computer vision et datascience.
-            </p>
-            <p>
-                Recherche un poste de développeur R&D, à partir de novembre 2025.
-            </p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="text-5xl">Anatole de Chauveron</h1>
+            <h3>Welcome to my portfolio</h3>
         </div>
-
-        <table id="contact-infos">
-            <thead>
-                <th>Item</th>
-                <th>Value</th>
-            </thead>
-            <tr><td>Email</td> <td><a target="_blank" rel="noopener noreferrer" href="mailto:adechauveron@gmail.com">adechauveron@gmail.com</a></td></tr>
-            <tr><td>Adresse</td> <td>Paris 15</td></tr>
-            <tr><td>Github</td> <td><a target="_blank" rel="noopener noreferrer" href="https://github.com/Anatole-DC">github.com/Anatole-DC</a></td></tr>
-            <tr><td>LinkedIn</td> <td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/adechauveron/">linkedin.com/in/adechauveron</a></td></tr>
-        </table>
+    
     </header>
 
     <main>
-        <h2>Expériences et projets</h2>
-
-        <div id="experiences">
-
-            <div id="solids" class="experience">
-                <div class="experience-title">
-                    <h3><a target="_blank" rel="noopener noreferrer" href="https://www.solids-workshop.fr/">Co-fondateur et développeur - SOLIDS</a></h3>
-                    <h4>Septembre 2023 - Aujourd'hui</h4>
-                </div>
-                <p class="description">
-                    Création, et développement d'une startup spécialisée en impression 3D.
-                    Responsable R&D, innovations et maintenance des services numériques.
-                </p>
-                <ul class="tasks">
-                    <li>
-                        Création d'une plateforme e-commerce d'impression 3D avec <tech>SvelteKit</tech>,
-                        <tech>ThreeJS</tech>, <tech>Stripe</tech>, <tech>Umami</tech>, <tech>PocketBase</tech> et <tech>Docker</tech>, déploiement avec <tech>Github Actions</tech>,
-                        et maintenance avec <tech>Traefik</tech> et <tech>Graphana</tech> sur <tech>OVHCloud</tech>
-                    </li>
-                    <li>
-                        Développement d'un système de détection d'échecs pour imprimantes 3D
-                        avec <tech>Python</tech>, <tech>Docker</tech>, <tech>Raspberry</tech>, et <tech>Balena</tech>,
-                        intégration des différents firmwares des imprimantes 3D,
-                        CAO du boitier et du support caméra avec <tech>Fusion360</tech>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="anymates" class="experience">
-                <div class="experience-title">
-                    <h3>Développeur VFX - Anymates</h3>
-                    <h4>Janvier 2025 - Aujourd'hui</h4>
-                </div>
-                <p class="description">
-                    Développement d'un plugin VFX pour After Effects et Premiere Pro et distribution du plugin via la société <a target="_blank" rel="noopener noreferrer" href="https://aescripts.com/">aescripts</a>.
-                </p>
-                <ul class="tasks">
-                    <li>
-                        Développement du plugin en <tech>C++</tech>,
-                        adaptation du SDK d'After Effects pour une configuration et un packaging cross-platform avec <tech>CMake</tech>,
-                        contrôle qualité avec <tech>GoogleTest</tech>, CI-CD avec <tech>Github Actions</tech>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="lewagon" class="experience">
-                <div class="experience-title">
-                    <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/stars/Anatole-DC/lists/bus-le-wagon">Teacher Assistant - Le Wagon</a></h3>
-                    <h4>Juin 2024 - Septembre 2025</h4>
-                </div>
-                <p class="description">
-                    Encadrement des étudiants du bootcamp datascience.
-                </p>
-                <ul class="tasks">
-                    <li>
-                        Aide pour les challenges et pour retravailler les notions théoriques en datascience et en développement informatique
-                        (<tech>Python</tech>, <tech>SQL</tech>, <tech>Jupyter</tech>, <tech>Jupyter Book</tech>, <tech>Sklearn</tech>, <tech>Tensorflow</tech>)
-                    </li>
-                    <li>
-                        Encadrement des projets étudiants de fin de bootcamp (<tech>Google Cloud Platform</tech>, <tech>Docker</tech>, <tech>Streamlit</tech>),
-                        en s'assurant des bonnes pratiques de datascience et de développement collaboratif avec <tech>Git</tech> et <tech>Github</tech>
-                    </li>
-                </ul>
-            </div>
-    
-            <div id="ivs" class="experience">
-                <div class="experience-title">
-                    <h3><a target="_blank" rel="noopener noreferrer" href="https://ivstore.fr/index.php/en/home/">Alternance - new IVS</a></h3>
-                    <h4>Août 2021 - Septembre 2023</h4>
-                </div>
-                <p class="description">
-                    Alternant en tant que développeur en R&D vision des ordinateurs avec <tech>OpenCV</tech>, en <tech>C++</tech> et en <tech>Python</tech>.
-                </p>
-                <ul class="tasks">
-                    <li>
-                        Intégration et mise en production des modèles d'intelligence artificielle et gestion d'infrastructure big data pour des données temporelles avec <tech>HBase</tech>, <tech>PostgresSQL</tech> et <tech>Docker</tech>
-                    </li>
-                    <li>
-                        Conception, et prototypage du projet <a target="_blank" rel="noopener noreferrer" href="https://ivstore.fr/en/home/flexoffice-management/">IVSFlex</a> jusqu'au déploiement client,
-                        développement d'un framework de génération et streaming de données en <tech>Python</tech> pour micro-ordinateurs (<tech>Docker</tech>, <tech>Raspberry</tech>, <tech>Coral Devboard</tech>),
-                        gestion des données avec  <tech>SQLite</tech> et <tech>MongoDB</tech>,
-                        CAO avec <tech>Fusion 360</tech> et impression 3D du support de caméra
-                    </li>
-                </ul>
-            </div>
-        </div>
 
     </main>
 
     <footer>
-        <div class="interest-area">
-            <h2>Centres d'intérêts</h2>
 
-            <div class="interests">
-                <div class="interest" id="music">
-                    <h4>Musique</h4>
-                    <ul>
-                        <li>Diplôme études musicale (Cycle 3)</li>
-                        <li>Clarinette, Orchestre, Orgue</li>
-                    </ul>
-                </div>
-    
-                <div class="interest" id="scoutisme">
-                    <h4>Scoutisme</h4>
-                    <ul>
-                        <li>Douze ans en tant que scout</li>
-                        <li>Chef pendant deux ans</li>
-                    </ul>
-                </div>
-    
-                <div class="interest" id="theatre">
-                    <h4>Théâtre</h4>
-                    <ul>
-                        <li>Trois années dont deux en option pour le bac</li>
-                        <li>Ecriture, et mise en scène</li>
-                    </ul>
-                </div>
-    
-                <div class="interest" id="sport">
-                    <h4>Sport</h4>
-                    <ul>
-                        <li>Basketball (compétition)</li>
-                        <li>Natation</li>
-                        <li>Volleyball</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="formation-area">
-            <h2>Formations</h2>
-
-            <div class="formations">
-                <div class="formation">
-                    <h4><a target="_blank" rel="noopener noreferrer" href="https://www.lewagon.com/fr/data-science-course">Datascience bootcamp</a></h4>
-                    <h5>Avril 2024 - Juin 2024</h5>
-
-                    <p>Le Wagon Paris - Porteur du projet <a target="_blank" rel="noopener noreferrer" href="https://github.com/Anatole-DC/koregraph">Koregraph</a></p>
-                </div>
-                
-                <div class="formation">
-                    <h4><a target="_blank" rel="noopener noreferrer" href="https://www.fges.fr/formations/master-cyber/">Master 2 Cyber</a></h4>
-                    <h5>2021 - 2023</h5>
-                    <p>Université Catholique de Lille - <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1e7dcLuqfZApFxsHKO7zxOB4DJYxNpwvd/view?usp=sharing">Mémoire sur la détection des actions dans le sport</a></p>
-                </div>
-                
-                <div class="formation">
-                    <h4><a target="_blank" rel="noopener noreferrer" href="https://www.fges.fr/formations/licence-sciences-du-numerique/">Licence Sciences du Numérique</a></h4>
-                    <h5>2018 - 2021</h5>
-                    <p>Université Catholique de Lille - Parcours <i>maker</i></p>
-                </div>
-            </div>
-            
-        </div>
     </footer>
 </body>
 </html>
